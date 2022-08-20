@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import MyButton from "../../components/Button";
+---
+
+<Layout title="About">
+    <main class="wrap">
+        <h2>About Page</h2>
+        <MyButton client:idle/>
+    </main>
+</Layout>
+
+<style>
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: azure;
+        height: 300px;
+    }
+</style>
