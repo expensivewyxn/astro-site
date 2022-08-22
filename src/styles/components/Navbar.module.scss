@@ -1,4 +1,5 @@
-$bg: rgb(212,229,239);
+@use "../global.scss" as *;
+
 
 @mixin flex {
   display: flex;
@@ -6,12 +7,12 @@ $bg: rgb(212,229,239);
 }
 
 .navbar {
-  background-color: $bg;
+  background-color: $blue;
   position: sticky;
   top: 0;
   padding: 0 2rem;
 
-  h3 {
+  h2 {
     flex-grow: 1;
   }
 
