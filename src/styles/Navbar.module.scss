@@ -1,4 +1,4 @@
-$bg: #b5fde9;
+$bg: rgb(212,229,239);
 
 @mixin flex {
   display: flex;
@@ -7,9 +7,7 @@ $bg: #b5fde9;
 
 .navbar {
   background-color: $bg;
-}
 
-.navbar {
   div {
     @include flex;
     justify-content: flex-end;
