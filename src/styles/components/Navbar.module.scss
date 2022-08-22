@@ -1,5 +1,10 @@
 @use "../global.scss" as *;
 
+@font-face {
+  font-family: 'Dancing';
+  src: url("/fonts/DancingScript-Regular.ttf");
+}
+
 
 @mixin flex {
   display: flex;
@@ -14,6 +19,7 @@
 
   h2 {
     flex-grow: 1;
+    font-family: 'Dancing';
   }
 
   div {
