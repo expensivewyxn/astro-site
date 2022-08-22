@@ -1,13 +1,38 @@
+$bg: #b5fde9;
+
 @mixin flex {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-  list-style: none;
-  margin: 0;
 }
 
-nav ul {
-  @include flex;
-  padding-inline-start: 0;
+.navbar {
+  background-color: $bg;
+}
+
+.navbar {
+  div {
+    @include flex;
+    justify-content: flex-end;
+    height: 90px;
+    margin: auto;
+    margin-top: 0;
+    max-width: 1300px;
+  }
+
+  ul {
+    @include flex;
+    align-items: flex-end;
+    margin: 0;
+    padding-inline-start: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-right: 4rem;
+  }
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
 }

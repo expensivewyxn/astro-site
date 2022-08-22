@@ -1,12 +1,17 @@
 ---
-import "../styles/Navbar.module.scss"
+import styles from "../styles/Navbar.module.scss";
 ---
 
-
-<nav>
-    <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-    </ul>
+<nav class={styles.navbar}>
+    <div>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
+            <li>Contact</li>
+        </ul>
+    </div>
 </nav>
