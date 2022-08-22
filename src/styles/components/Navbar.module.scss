@@ -7,6 +7,13 @@ $bg: rgb(212,229,239);
 
 .navbar {
   background-color: $bg;
+  position: sticky;
+  top: 0;
+  padding: 0 2rem;
+
+  h3 {
+    flex-grow: 1;
+  }
 
   div {
     @include flex;
@@ -26,7 +33,7 @@ $bg: rgb(212,229,239);
   }
 
   li {
-    margin-right: 4rem;
+    margin-left: 3rem;
   }
 
   a {
