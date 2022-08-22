@@ -1,1 +1,26 @@
-$blue: rgb(212,229,239);
+$blue: rgb(212, 229, 239);
+$black: rgb(21, 29, 41);
+$white: rgb(239, 239, 239);
+$green: rgb(108, 134, 80);
+$red: rgb(210, 57, 24);
+$yellow: rgb(255, 247, 153);
+
+@mixin flexContainer($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin disableSelect {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+}

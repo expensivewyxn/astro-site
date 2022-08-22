@@ -1,19 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import styles from "../../styles/pages/About.module.scss"
 ---
 
 <Layout title="About">
-    <main class="wrap">
-        <h2>Hello</h2>
+    <main class={styles.wrap}>
+        <h2>Hello, this is</h2>
+        <h1>Ryan Leung</h1>
+        <h5 class={styles.short}>Web Developer | Day Trader | Music Enthusiast</h5>
     </main>
 </Layout>
-
-<style>
-    .wrap {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 300px;
-    }
-</style>

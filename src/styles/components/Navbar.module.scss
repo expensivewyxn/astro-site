@@ -20,6 +20,7 @@
   h2 {
     flex-grow: 1;
     font-family: 'Dancing';
+    @include disableSelect;
   }
 
   div {
