@@ -1,0 +1,31 @@
+@use "../global.scss" as *;
+
+.selfIntro {
+  @include flexContainer(column, center, start);
+  height: 500px;
+  width: 80%;
+  margin: auto;
+
+  h2 {
+    margin: 4rem 0;
+    color: $green;
+
+    span {
+        font-weight: 300;
+        color: $black;
+    }
+  }
+}
+
+.columns {
+  @include flexContainer(row, center, center);
+  max-width: 800px;
+}
+
+.col1 {
+  flex: 0.6;
+}
+
+.col2 {
+  flex: 1;
+}

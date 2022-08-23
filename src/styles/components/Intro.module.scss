@@ -2,7 +2,7 @@
 
 .wrap {
     @include flexContainer(column, center, center);
-    height: 400px;
+    height: 450px;
     background-color: $black;
     text-align: center;
     padding: 0 1rem;

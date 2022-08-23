@@ -28,7 +28,9 @@ export default function Navbar() {
           <li>
             <a href="/about">About</a>
           </li>
-          <li>Contact</li>
+          <li>
+            <a>Contact</a>
+          </li>
         </ul>
       </div>
     </motion.nav>
