@@ -2,20 +2,22 @@
 import Intro from "../../components/Intro.astro";
 import Layout from "../../layouts/Layout.astro";
 import styles from "../../styles/pages/About.module.scss";
+import "../../styles/fa/fontawesome.scss";
+import "../../styles/fa/regular.scss";
 ---
 
 <Layout title="About">
     <main>
         <Intro />
         <section class={styles.selfIntro}>
-            <h2><span>About</span> Me</h2>
+            <h2><span>About</span> Me <i class="fa-regular fa-user"/></h2>
             <div class={styles.columns}>
                 <div class={styles.col1}>
                     <h3>A random photo</h3>
                 </div>
                 <div class={styles.col2}>
                     <p>
-                        Hi! My name is Ryan. I am a final year student studying at the Hong Kong University of Science and Technology, majoring in Information Systems in the School of Business. 
+                        Hi! I am a final year student studying at the Hong Kong University of Science and Technology, majoring in Information Systems in the School of Business. 
                     </p>
                     <br/>
                     <p>

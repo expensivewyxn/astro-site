@@ -10,7 +10,6 @@ export default function Navbar() {
     return scrollY.onChange((latest) => {
       if (latest > 100) {
         setScrolled(true)
-        console.log(latest)
       } else {
         setScrolled(false)
       }
