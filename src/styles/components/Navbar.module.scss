@@ -1,10 +1,9 @@
 @use "../global.scss" as *;
 
 @font-face {
-  font-family: 'Dancing';
+  font-family: "Dancing";
   src: url("/fonts/DancingScript-Regular.ttf");
 }
-
 
 @mixin flex {
   display: flex;
@@ -12,14 +11,17 @@
 }
 
 .navbar {
-  background-color: $blue;
+  // background-color: $blue;
   position: sticky;
   top: 0;
   padding: 0 2rem;
+  transition: 0.3s ease;
+  color: $white;
+  margin-bottom: -70px;
 
   h2 {
     flex-grow: 1;
-    font-family: 'Dancing';
+    font-family: "Dancing";
     @include disableSelect;
   }
 
@@ -45,7 +47,17 @@
   }
 
   a {
-    color: var(--color-text);
+    color: $white;
     text-decoration: none;
+  }
+}
+
+.darkbg {
+  background-color: $blue;
+  transition: 0.3s ease;
+  color: $black;
+
+  a {
+    color: $black;
   }
 }

@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.jsx";
 import "../styles/layouts/Layout.module.scss"
 
 export interface Props {
@@ -23,7 +23,7 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<Navbar />
+		<Navbar client:load/>
 		<slot />
 	</body>
 </html>
