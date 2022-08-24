@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 export default function Navbar() {
   const { scrollY } = useScroll()
   const [scrolled, setScrolled] = useState(false)
+  const [clicked, setClicked] = useState(false)
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
@@ -20,7 +21,7 @@ export default function Navbar() {
     <motion.nav className={`${styles.navbar} ${scrolled && styles.darkbg}`}>
       <div>
         <h2>Ryan Leung</h2>
-        <ul>
+        <ul  className={styles.links}>
           <li>
             <a href="/">Home</a>
           </li>
@@ -31,6 +32,23 @@ export default function Navbar() {
             <a>Contact</a>
           </li>
         </ul>
+          <div className={styles.ham} onClick={() => setClicked(!clicked)}>
+            <span className={clicked ? styles.bar1 : undefined}></span>
+            <span className={clicked ? styles.bar2 : undefined}></span>
+            <span className={clicked ? styles.bar3 : undefined}></span>
+          </div>
+        {clicked ? (
+          <div className={styles.navmenu}>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/about">About</a>
+              </li>
+            </ul>
+          </div>
+        ) : null}
       </div>
     </motion.nav>
   )
