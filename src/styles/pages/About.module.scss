@@ -2,22 +2,19 @@
 
 .selfIntro {
   @include flexContainer(column, center, start);
-  height: 500px;
   width: 80%;
   margin: auto;
+  padding-bottom: 4rem;
 
   & > h2 {
     margin: 4rem 0;
     color: $green;
+    text-align: center;
 
     span {
       font-weight: 300;
       color: $black;
     }
-  }
-
-  i {
-    color: $black;
   }
 
   .columns {
@@ -27,6 +24,12 @@
 
   .col1 {
     flex: 0.6;
+    
+    img {
+      width: 180px;
+      border: 2px solid $yellow;
+      border-radius: 100%;
+    }
   }
 
   .col2 {
@@ -40,13 +43,13 @@
   @media screen and (max-width: 768px) {
     .columns {
       flex-direction: column;
+      gap: 4rem;
     }
   }
 }
 
 .frameworks {
   padding-top: 6rem;
-  min-height: 800px;
   text-align: center;
 
   h3 {
@@ -62,7 +65,7 @@
     @include flexContainer(row, center, center);
     flex-wrap: wrap;
     margin-top: 2rem;
-    gap: 3rem;
+    gap: 2.5rem;
 
     img {
       width: 60px;
@@ -70,6 +73,16 @@
 
     .next {
       width: 100px;
+    }
+
+    .mongodb {
+      width: 120px;
+      margin-bottom: -10px;
+    }
+
+    .mysql {
+      width: 120px;
+      margin-left: -1.2rem;
     }
   }
 }

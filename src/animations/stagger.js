@@ -13,7 +13,8 @@ export const container = {
         x: 100,
         transition: {
             staggerChildren: 0.2,
-            when: 'afterChildren'
+            when: 'afterChildren',
+            duration: 0.6
         }
     }
 }
