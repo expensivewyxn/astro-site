@@ -53,15 +53,16 @@
       color: $yellow;
     }
   }
-  
+
   @media screen and (max-width: 950px) {
     .links {
       display: none;
     }
   }
-  
+
   @media screen and (min-width: 950px) {
-    .ham, .navmenu {
+    .ham,
+    .navmenu {
       display: none;
     }
   }
@@ -79,6 +80,15 @@
       color: $darkYellow;
     }
   }
+
+  .bar2 {
+    transform: translateX(20px);
+    background-color: transparent !important;
+  }
+
+  .ham span {
+    background-color: $black;
+  }
 }
 
 .ham {
@@ -90,13 +100,12 @@
   span {
     height: 2px;
     width: 1.5rem;
-    background-color: $red;
+    background-color: $white;
     transition: 0.6s ease-in-out;
   }
 
   .bar1 {
     transform: rotate(45deg) translateX(35%);
-    // transform-origin: 14%;
   }
 
   .bar2 {
@@ -106,16 +115,16 @@
 
   .bar3 {
     transform: rotate(-45deg) translateX(35%);
-    // transform-origin: 14%;
   }
 }
 
 .navmenu {
   ul {
     @include flexContainer(column, center, center);
+    gap: 2rem;
     width: 50px;
     position: fixed;
-    top: 120px;
-    right: 8%;
+    top: 90px;
+    right: 3rem;
   }
 }

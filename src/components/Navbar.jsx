@@ -21,7 +21,7 @@ export default function Navbar() {
     <motion.nav className={`${styles.navbar} ${scrolled && styles.darkbg}`}>
       <div>
         <h2>Ryan Leung</h2>
-        <ul  className={styles.links}>
+        <ul className={styles.links}>
           <li>
             <a href="/">Home</a>
           </li>
@@ -32,11 +32,11 @@ export default function Navbar() {
             <a>Contact</a>
           </li>
         </ul>
-          <div className={styles.ham} onClick={() => setClicked(!clicked)}>
-            <span className={clicked ? styles.bar1 : undefined}></span>
-            <span className={clicked ? styles.bar2 : undefined}></span>
-            <span className={clicked ? styles.bar3 : undefined}></span>
-          </div>
+        <div className={styles.ham} onClick={() => setClicked(!clicked)}>
+          <span className={clicked ? styles.bar1 : undefined}></span>
+          <span className={clicked ? styles.bar2 : undefined}></span>
+          <span className={clicked ? styles.bar3 : undefined}></span>
+        </div>
         {clicked ? (
           <div className={styles.navmenu}>
             <ul>
