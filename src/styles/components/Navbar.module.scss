@@ -73,7 +73,7 @@
   background-color: $blue;
   transition: 0.3s ease;
   color: $black;
-  opacity: 0.9;
+  opacity: 0.95;
 
   a {
     color: $black;
@@ -89,6 +89,10 @@
 
   .ham span {
     background-color: $black;
+  }
+
+  .navmenu ul {
+    background-color: $blue;
   }
 }
 
@@ -122,11 +126,12 @@
 
 .navmenu {
   ul {
-    @include flexContainer(column, center, center);
+    @include flexContainer(column, center, start);
     gap: 2rem;
-    width: 50px;
     position: fixed;
-    top: 90px;
-    right: 3rem;
+    top: 70px;
+    height: calc(100vh - 70px);
+    right: 0;
+    padding-right: 3rem;
   }
 }

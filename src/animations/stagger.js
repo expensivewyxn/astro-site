@@ -1,6 +1,7 @@
 export const container = {
     hidden: { opacity: 0 },
     show: {
+        x: 0,
         opacity: 1,
         transition: {
             staggerChildren: 0.2,
@@ -9,6 +10,7 @@ export const container = {
     },
     exit: {
         opacity: 0,
+        x: 100,
         transition: {
             staggerChildren: 0.2,
             when: 'afterChildren'
