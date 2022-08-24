@@ -10,19 +10,34 @@ import "../../styles/fontawesome/regular.scss";
     <main>
         <Intro />
         <section class={styles.selfIntro}>
-            <h2><span>About</span> Me <i class="fa-regular fa-user"/></h2>
+            <h2><span>About</span> Me <i class="fa-regular fa-user"></i></h2>
             <div class={styles.columns}>
                 <div class={styles.col1}>
                     <h3>A random photo</h3>
                 </div>
                 <div class={styles.col2}>
                     <p>
-                        Hi! I am a final year student studying at the Hong Kong University of Science and Technology, majoring in Information Systems in the School of Business. 
+                        Hi! I am a final year student studying at the Hong Kong
+                        University of Science and Technology, majoring in
+                        Information Systems in the School of Business.
                     </p>
-                    <br/>
+                    <br />
                     <p>
-                        I have been developing websites for 3 years now, and I make simple and clean looking websites like this one. So if you ever need a website, maybe I could help you out :D
+                        I have been developing websites for 3 years now, and I
+                        make simple and clean looking websites like this one. So
+                        if you ever need a website, maybe I could help you out
+                        :D
                     </p>
+                </div>
+            </div>
+            <div class={styles.frameworks}>
+                <h3>Some <span>technologies</span> that I use</h3>
+                <div class={styles.logos}>
+                    <img src="/svg/next-js.svg" alt="next js logo" class={styles.next}/>
+                    <img src="/svg/react-2.svg" alt="react logo" />
+                    <img src="/svg/astro.svg" alt="astro logo" />
+                    <img src="/svg/sass.svg" alt="sass logo" />
+                    <img src="/svg/wordpress.svg" alt="wordpress logo" />
                 </div>
             </div>
         </section>

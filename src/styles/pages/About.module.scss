@@ -6,30 +6,64 @@
   width: 80%;
   margin: auto;
 
-  h2 {
+  & > h2 {
     margin: 4rem 0;
     color: $green;
 
     span {
-        font-weight: 300;
-        color: $black;
+      font-weight: 300;
+      color: $black;
+    }
+  }
+
+  i {
+    color: $black;
+  }
+
+  .columns {
+    @include flexContainer(row, center, center);
+    max-width: 800px;
+  }
+
+  .col1 {
+    flex: 0.6;
+  }
+
+  .col2 {
+    flex: 1;
+
+    .logo {
+      width: 80px;
     }
   }
 }
 
-.columns {
-  @include flexContainer(row, center, center);
-  max-width: 800px;
-}
+.frameworks {
+  padding-top: 6rem;
+  min-height: 800px;
+  text-align: center;
 
-.col1 {
-  flex: 0.6;
-}
+  h3 {
+    font-weight: 300;
 
-.col2 {
-  flex: 1;
-  
-  .logo {
-    width: 80px;
+    span {
+      font-weight: 600;
+      color: $green;
+    }
+  }
+
+  .logos {
+    @include flexContainer(row, center, center);
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 3rem;
+
+    img {
+      width: 60px;
+    }
+
+    .next {
+      width: 100px;
+    }
   }
 }
