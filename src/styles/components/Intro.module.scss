@@ -30,9 +30,9 @@
   }
   span {
     position: absolute;
-    margin-top: -400px;
+    margin-top: -20px;
     top: 0;
-    left: 20vw;
+    left: 70vw;
     width: 4px;
     height: 4px;
     background: #fff;
@@ -57,7 +57,7 @@
       opacity: 1;
     }
     100% {
-      transform: rotate(315deg) translateX(-1000px);
+      transform: rotate(315deg) translateX(-1500px);
       opacity: 0;
     }
   }
@@ -95,48 +95,9 @@
 
   span:nth-child(5) {
     top: 0;
-    right: 400px;
+    right: 300px;
     left: initial;
     animation-delay: 0.8s;
     animation-duration: 2.5s;
-  }
-
-  span:nth-child(6) {
-    top: 0;
-    right: 600px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 3s;
-  }
-  span:nth-child(7) {
-    top: 300px;
-    right: 0px;
-    left: initial;
-    animation-delay: 1s;
-    animation-duration: 1.75s;
-  }
-
-  span:nth-child(8) {
-    top: 0px;
-    right: 700px;
-    left: initial;
-    animation-delay: 1.4s;
-    animation-duration: 1.25s;
-  }
-
-  span:nth-child(9) {
-    top: 0px;
-    right: 1000px;
-    left: initial;
-    animation-delay: 0.75s;
-    animation-duration: 2.25s;
-  }
-
-  span:nth-child(10) {
-    top: 0px;
-    right: 90vw;
-    left: initial;
-    animation-delay: 2.75s;
-    animation-duration: 2.25s;
   }
 }
