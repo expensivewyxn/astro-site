@@ -2,6 +2,7 @@
 
 .wrap {
   @include flexContainer(column, center, center);
+  max-width: 100vw;
   height: 450px;
   background-color: $black;
   text-align: center;
@@ -28,11 +29,17 @@
     font-weight: 300;
     letter-spacing: 0.25rem;
   }
+
+  @media screen and (max-width: 500px) {
+    span {
+      top: 0;
+    }
+  }
+
   span {
     position: absolute;
-    margin-top: -20px;
-    top: 0;
-    left: 70vw;
+    margin-top: -120px;
+    top: 100px;
     width: 4px;
     height: 4px;
     background: #fff;
@@ -41,6 +48,7 @@
       0 0 0 8px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 1);
     animation: animate 3s linear infinite;
   }
+
   span::before {
     content: "";
     position: absolute;
@@ -48,6 +56,7 @@
     height: 1px;
     background: linear-gradient(90deg, #fff, transparent);
   }
+
   @keyframes animate {
     0% {
       transform: rotate(315deg) translateX(0);
@@ -61,8 +70,8 @@
       opacity: 0;
     }
   }
+
   span:nth-child(1) {
-    top: 0;
     right: 0;
     left: initial;
     animation-delay: 0;
@@ -70,7 +79,6 @@
   }
 
   span:nth-child(2) {
-    top: 0;
     right: 80px;
     left: initial;
     animation-delay: 0.2s;
@@ -78,7 +86,6 @@
   }
 
   span:nth-child(3) {
-    top: 80px;
     right: 0px;
     left: initial;
     animation-delay: 0.4s;
@@ -86,7 +93,6 @@
   }
 
   span:nth-child(4) {
-    top: 0;
     right: 180px;
     left: initial;
     animation-delay: 0.6s;
@@ -94,10 +100,16 @@
   }
 
   span:nth-child(5) {
-    top: 0;
-    right: 300px;
+    right: 400px;
     left: initial;
     animation-delay: 0.8s;
     animation-duration: 2.5s;
+  }
+
+  span:nth-child(6) {
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
   }
 }
