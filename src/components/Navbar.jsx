@@ -9,7 +9,7 @@ export default function Navbar() {
 
   useEffect(() => {
     return scrollY.onChange((latest) => {
-      if (latest > 100) {
+      if (latest > 330) {
         setScrolled(true)
       } else {
         setScrolled(false)

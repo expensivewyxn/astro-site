@@ -20,6 +20,7 @@
 
   h2 {
     flex-grow: 1;
+    font-weight: 300;
     font-family: "Dancing";
     @include disableSelect;
   }
@@ -96,7 +97,7 @@
   flex-direction: column;
   align-self: center;
   gap: 4px;
-  background: transparent;
+  -webkit-tap-highlight-color: transparent;
 
   span {
     height: 2px;
