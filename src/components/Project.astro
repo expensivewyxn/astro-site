@@ -11,7 +11,7 @@ const { name, description, frameworks } = Astro.props as Props;
 <li class="card">
     <h4>{name}</h4>
     <p>{description}</p>
-    <div>
+    <div class="frameworks">
         {
             frameworks.map((f) => (
                 <>
@@ -27,5 +27,34 @@ const { name, description, frameworks } = Astro.props as Props;
 
     .card {
         background-color: $white;
+        padding: 1rem 0.8rem;
+        border-radius: 8px;
+        position: relative;
+        transition: 0.6s ease;
+        
+        &:hover {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        h4 {
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 4rem;
+        }
+
+        .frameworks {
+            position: absolute;
+            bottom: 1rem;
+
+            span {
+                padding: 4px;
+                margin-right: 8px;
+                border-radius: 8px;
+                color: $yellow;
+                background-color: $black;
+            }
+        }
     }
 </style>
