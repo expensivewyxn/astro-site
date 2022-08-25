@@ -8,6 +8,7 @@
     <span></span>
     <span></span>
     <span></span>
+    <img src="/svg/rocket.svg" alt="rocket" class="rocket" />
 </section>
 
 <style lang="scss">
@@ -26,6 +27,7 @@
         h1,
         h2 {
             color: $white;
+            z-index: 2;
         }
 
         h1 {
@@ -41,6 +43,7 @@
             color: $yellow;
             font-weight: 300;
             letter-spacing: 0.25rem;
+            z-index: 2;
         }
 
         @media screen and (max-width: 500px) {
@@ -125,6 +128,28 @@
             left: initial;
             animation-delay: 1s;
             animation-duration: 3s;
+        }
+
+        @keyframes rocket {
+            0% {
+                transform: translateY(500px) translateX(-200px);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-200px) translateX(290px);
+                opacity: 0.9;
+            }
+        }
+
+        .rocket {
+            position: absolute;
+            top: 0;
+            width: 50px;
+            animation: rocket 15s linear infinite;
+            transform: rotate(10deg);
         }
     }
 </style>
