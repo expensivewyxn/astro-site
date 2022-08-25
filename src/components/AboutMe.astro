@@ -1,39 +1,38 @@
 ---
-import styles from "../styles/components/AboutMe.module.scss"
+import "../styles/components/AboutMe.scss";
 ---
 
-<section class={styles.selfIntro}>
+<section class="selfIntro">
     <h2><span>About</span> Me</h2>
-    <div class={styles.columns}>
-        <div class={styles.col1}>
-            <img src="/images/Ryan.jpg" alt="Image of Ryan"/>
+    <div class="columns">
+        <div class="col1">
+            <img src="/images/Ryan.jpg" alt="Image of Ryan" />
         </div>
-        <div class={styles.col2}>
+        <div class="col2">
             <p>
                 Hi! I am a final year student studying at the Hong Kong
-                University of Science and Technology, majoring in
-                Information Systems in the School of Business and Management.
+                University of Science and Technology, majoring in Information
+                Systems in the School of Business and Management.
             </p>
             <br />
             <p>
-                I have been developing websites for 3 years now, and I
-                make simple and clean looking websites like this one. So
-                if you ever need a website, maybe I could help you out
-                :D
+                I have been developing websites for 3 years now, and I make
+                simple and clean looking websites like this one. So if you ever
+                need a website, maybe I could help you out :D
             </p>
         </div>
     </div>
-    <div class={styles.frameworks}>
+    <div class="frameworks">
         <h3>Some <span>technologies</span> that I use</h3>
-        <div class={styles.logos}>
-            <img src="/svg/next-js.svg" alt="next js logo" class={styles.next}/>
+        <div class="logos">
+            <img src="/svg/next-js.svg" alt="next js logo" class="next" />
             <img src="/svg/react-2.svg" alt="react logo" />
             <img src="/svg/astro.svg" alt="astro logo" />
             <img src="/svg/sass.svg" alt="sass logo" />
             <img src="/svg/wordpress.svg" alt="wordpress logo" />
-            <img src="/svg/strapi.svg" alt="strapi logo" class={styles.strapi}/>
-            <img src="/svg/mongodb.svg" alt="mongodb logo" class={styles.mongodb}/>
-            <img src="/svg/mysql.svg" alt="mysql logo" class={styles.mysql} />
+            <img src="/svg/strapi.svg" alt="strapi logo" class="strapi" />
+            <img src="/svg/mongodb.svg" alt="mongodb logo" class="mongodb" />
+            <img src="/svg/mysql.svg" alt="mysql logo" class="mysql" />
         </div>
     </div>
 </section>
