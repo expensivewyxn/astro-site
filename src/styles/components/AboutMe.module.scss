@@ -1,6 +1,6 @@
 @use "../global.scss" as *;
-@use "../fontawesome/scss/fontawesome.scss" as fa;
-@use "../fontawesome/scss/_variables.scss" as var;
+// @use "../fontawesome/scss/fontawesome.scss" as fa;
+// @use "../fontawesome/scss/_variables.scss" as var;
 
 .selfIntro {
   @include flexContainer(column, center, start);
@@ -17,10 +17,6 @@
       font-weight: 300;
       color: $black;
     }
-  }
-
-  .user {
-    @include fa.fa-icon-solid(var.$fa-var-anchor);
   }
 
   .columns {
