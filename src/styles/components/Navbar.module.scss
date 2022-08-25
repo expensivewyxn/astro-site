@@ -14,7 +14,7 @@
   position: sticky;
   top: 0;
   padding: 0 2rem;
-  transition: 0.3s ease;
+  transition: 0.6s ease;
   color: $white;
   margin-bottom: -70px;
 
@@ -133,5 +133,6 @@
     height: calc(100vh - 70px);
     right: 0;
     padding-right: 3rem;
+    transition: 0.4s background-color ease;
   }
 }
