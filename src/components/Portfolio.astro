@@ -1,0 +1,56 @@
+---
+import Project from "./Project.astro";
+---
+
+<section class="wrap">
+    <h2>My <span>Projects</span></h2>
+    <ul class="grid">
+        <Project 
+        name="Hi" 
+        description="Loremipsum"
+        frameworks={["Next JS", "Tailwind"]}
+        />
+        <Project 
+        name="Hi" 
+        description="Loremipsum"
+        frameworks={["Next JS", "Tailwind"]}
+        />
+        <Project 
+        name="Hi" 
+        description="Loremipsum"
+        frameworks={["Next JS", "Tailwind"]}
+        />
+    </ul>
+</section>
+
+<style lang="scss">
+    @use "../styles/global.scss" as *;
+
+    .wrap {
+        max-width: min(1000px, 90%);
+        text-align: center;
+        margin: auto;
+        padding-bottom: 4rem;
+
+        h2 {
+            margin: 4rem 0;
+            font-weight: 300;
+
+            span {
+                font-weight: 600;
+                color: $darkYellow;
+            }
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-auto-rows: 1fr;
+            gap: 1rem;
+        }
+    }
+</style>

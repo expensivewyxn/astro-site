@@ -1,0 +1,31 @@
+---
+export interface Props {
+    name: string;
+    description?: string;
+    frameworks?: string[];
+}
+
+const { name, description, frameworks } = Astro.props as Props;
+---
+
+<li class="card">
+    <h4>{name}</h4>
+    <p>{description}</p>
+    <div>
+        {
+            frameworks.map((f) => (
+                <>
+                    <span>{f}</span>
+                </>
+            ))
+        }
+    </div>
+</li>
+
+<style lang="scss">
+    @use "../styles/global.scss" as *;
+
+    .card {
+        background-color: $white;
+    }
+</style>
