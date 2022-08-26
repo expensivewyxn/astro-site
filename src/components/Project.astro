@@ -9,7 +9,10 @@ const { name, description, frameworks } = Astro.props as Props;
 ---
 
 <li class="card">
-    <h4>{name}</h4>
+    <h4>
+        {name}
+        <a href="/"><img src="/svg/arrow-up-right-from-square-solid.svg" alt="arrow icon" /></a>
+    </h4>
     <p>{description}</p>
     <div class="frameworks">
         {
@@ -26,34 +29,50 @@ const { name, description, frameworks } = Astro.props as Props;
     @use "../styles/global.scss" as *;
 
     .card {
+        @include flexContainer(column, start, start);
         background-color: $white;
-        padding: 1rem 0.8rem;
+        padding: 1.5rem 0.8rem;
         border-radius: 8px;
-        position: relative;
-        transition: 0.6s ease;
-        
+        transition: all 0.6s ease;
+
         &:hover {
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
 
         h4 {
             margin-bottom: 1.2rem;
+
+            img {
+                display: inline;
+                margin-left: 0.5rem;
+                margin-bottom: -0.1rem;
+                width: 1rem;
+            }
         }
 
         p {
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
+            flex-grow: 1;
         }
 
         .frameworks {
-            position: absolute;
-            bottom: 1rem;
+            @include flexContainer(row, center, start);
+            flex-wrap: wrap;
+            gap: 0.5rem;
 
             span {
-                padding: 4px;
-                margin-right: 8px;
-                border-radius: 8px;
+                @include disableSelect;
+                padding: 4px 8px;
+                border: 1px solid $black;
+                border-radius: 4px;
+                min-width: max-content;
                 color: $yellow;
                 background-color: $black;
+                transition: all 0.6s ease;
+
+                &:hover {
+                    border-color: $yellow;
+                }
             }
         }
     }
