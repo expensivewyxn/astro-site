@@ -7,16 +7,19 @@ import Project from "./Project.astro";
     <ul class="grid">
         <Project
             name="AIESEC HK Website"
+            link="https://aiesec.hk"
             description="I revamped the whole design of the website during my year 3. Used Wix but eventually settled on WordPress (for easier management). It's currently managed by my successors."
             frameworks={["WordPress"]}
         />
         <Project
             name="YS Website"
+            link="https://ys.aiesec.hk"
             description="Another project that I built during my AIESEC term. A static display site for an event. Built with Elementor as well."
             frameworks={["WordPress"]}
         />
         <Project
             name="AIESEC Application Portal"
+            link="https://application.aiesec.hk"
             description="A hobby project that resembles a job application site, with user authentication and filtering capabilities. Built during my year 3 summer holiday."
             frameworks={["Next JS", "Strapi"]}
         />
@@ -27,7 +30,7 @@ import Project from "./Project.astro";
     @use "../styles/global.scss" as *;
 
     .wrap {
-        max-width: min(1000px, 90%);
+        max-width: min(1000px, 85%);
         margin: auto;
         padding-bottom: 4rem;
 

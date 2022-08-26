@@ -1,0 +1,59 @@
+<section class="wrap">
+    <h2>My <span>Resume</span></h2>
+    <div class="exp-wrap">
+        <div class="col1"></div>
+        <div class="col2">
+            <div class="skills"></div>
+            <div class="interests"></div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    @use "../styles/global.scss" as *;
+
+    .wrap {
+        max-width: min(1000px, 85%);
+        margin: auto;
+        padding-bottom: 4rem;
+
+        & > h2 {
+            text-align: center;
+            margin: 4rem 0;
+            font-weight: 300;
+
+            span {
+                font-weight: 600;
+                color: $red;
+            }
+        }
+    }
+
+    .exp-wrap {
+        @include flexContainer(row, start, start);
+        gap: 2rem;
+        width: 100%;
+        
+
+        .col1 {
+            background-color: $white;
+            border-radius: 0.5rem;
+            width: 100%;
+            height: 300px;
+        }
+
+        .col2 {
+            @include flexContainer(column, start, start);
+            gap: 2rem;
+            width: 100%;
+
+            .skills,
+            .interests {
+                background-color: $white;
+                border-radius: 0.5rem;
+                width: 100%;
+                height: 50px;
+            }
+        }
+    }
+</style>
