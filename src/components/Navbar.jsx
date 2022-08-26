@@ -30,7 +30,7 @@ export default function Navbar() {
             <a href="/about">About</a>
           </li>
           <li>
-            <a>Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
         <div className={styles.ham} onClick={() => setClicked(!clicked)}>
@@ -48,10 +48,13 @@ export default function Navbar() {
                 exit="exit"
               >
                 <motion.li variants={item}>
-                  <a href="/">Home</a>
+                  <a href="/#">Home</a>
                 </motion.li>
                 <motion.li variants={item}>
                   <a href="/about">About</a>
+                </motion.li>
+                <motion.li variants={item}>
+                  <a href="#contact">Contact</a>
                 </motion.li>
               </motion.ul>
             </div>
