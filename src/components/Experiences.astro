@@ -6,6 +6,15 @@
             <ul class="item">
                 <li class="single-item">
                     <h4>
+                        Full-time Day Trader
+                    </h4>
+                    <h5>May 2022 - Present</h5>
+                    <ul>
+                        <li>Day trading US stocks, sometimes crypto</li>
+                    </ul>
+                </li>
+                <li class="single-item">
+                    <h4>
                         GoBuddy Limited - Product Success and Web Design
                         Consultant
                     </h4>
@@ -17,9 +26,7 @@
                     </ul>
                 </li>
                 <li class="single-item">
-                    <h4>
-                        Scentique Limited - Summer Internship
-                    </h4>
+                    <h4>Scentique Limited - Summer Internship</h4>
                     <h5>Jul 2018 - Aug 2018</h5>
                     <ul>
                         <li>Designing social media promotion materials</li>
@@ -30,9 +37,7 @@
             <h3>Education</h3>
             <ul class="item">
                 <li class="single-item">
-                    <h4>
-                        The Hong Kong University of Science and Technology
-                    </h4>
+                    <h4>The Hong Kong University of Science and Technology</h4>
                     <h5>Sep 2019 - Present</h5>
                     <ul>
                         <li>School of Business and Management</li>
@@ -40,13 +45,66 @@
                     </ul>
                 </li>
             </ul>
+            <h3>Extra-Curricular Activities</h3>
+            <ul class="item">
+                <li class="single-item">
+                    <h4>AIESEC in HK - Manager of Branding and Marketing</h4>
+                    <h5>Aug 2021 - Aug 2022</h5>
+                    <ul>
+                        <li>Re-designed and re-implemented all websites</li>
+                        <li>Cleaned up the backend tech stack</li>
+                    </ul>
+                </li>
+                <li class="single-item">
+                    <h4>
+                        AIESEC in HKUST - Membership and Manager of Outgoing
+                        Global Volunteer
+                    </h4>
+                    <h5>Oct 2020 - Jul 2021</h5>
+                    <ul>
+                        <li>Led a team of 8</li>
+                        <li>Facilitated leadership development</li>
+                        <li>Fostered local and international partnerships</li>
+                        <li>Awarded as the <strong>Best Manager in Hong Kong</strong></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div class="col2">
             <div class="skills">
                 <h3>Skills</h3>
+                <h4>Coding (web)</h4>
+                <ul>
+                    <li>HTML, CSS, Sass</li>
+                    <li>React, Next JS</li>
+                    <li>Astro</li>
+                    <li>WordPress, Strapi</li>
+                    <li>MongoDB, SQL</li>
+                    <li>Gradually learning Typescript</li>
+                </ul>
+                <h4>Coding (data)</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>pandas, matplotlib, numpy</li>
+                    <li>scikit-learn</li>
+                    <li>hadoop, spark</li>
+                </ul>
+                <h4>Software</h4>
+                <ul>
+                    <li>Microsoft suite</li>
+                    <li>Figma, Adobe XD</li>
+                    <li>A little bit of Adobe Premiere</li>
+                </ul>
             </div>
             <div class="interests">
                 <h3>Interests</h3>
+                <ul>
+                    <li>Coffee making! Both drip and milk coffee</li>
+                    <li>Latte art</li>
+                    <li>Music Production - recording and mixing</li>
+                    <li>Remote-controlled cars</li>
+                    <li>Yoga</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -83,8 +141,9 @@
             padding: 1.5rem 0.8rem;
             flex: 1.4;
 
-            & > h3 {
+            h3 {
                 margin-bottom: 1.5rem;
+                color: $green;
             }
 
             .item {
@@ -101,7 +160,10 @@
 
                 ul {
                     padding-left: 1.3rem;
-                    font-size: 0.9rem;
+                }
+
+                li {
+                    font-size: 0.8rem;
                 }
             }
         }
@@ -111,12 +173,30 @@
             gap: 2rem;
             flex: 0.6;
 
+            h3 {
+                margin-bottom: 1.5rem;
+                color: $green;
+            }
+
             .skills,
             .interests {
                 background-color: $white;
                 border-radius: 0.5rem;
                 padding: 1.5rem 0.8rem;
-                height: 50px;
+
+                ul {
+                    padding-left: 1.3rem;
+                    list-style: circle;
+                    margin-bottom: 2rem;
+                }
+
+                li {
+                    font-size: 0.8rem;
+                }
+
+                h4 {
+                    margin: 0.5rem 0;
+                }
             }
         }
     }
