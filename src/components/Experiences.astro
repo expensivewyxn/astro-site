@@ -2,17 +2,43 @@
     <h2>My <span>Resume</span></h2>
     <div class="exp-wrap">
         <div class="col1">
-            <ul class="work">
-                <h3>Work Experiences</h3>
-                <h4>
-                    GoBuddy Limited - Product Success and Web Design Consultant
-                </h4>
-                <h5>Mar 2021 - Dec 2021</h5>
-                <ul>
-                    <li>Responsible for creating websites for clients</li>
-                    <li>Handling clients' ad-hoc requests</li>
-                    <li>UIUX design for the revamped customer portal</li>
-                </ul>
+            <h3>Work Experiences</h3>
+            <ul class="item">
+                <li class="single-item">
+                    <h4>
+                        GoBuddy Limited - Product Success and Web Design
+                        Consultant
+                    </h4>
+                    <h5>Mar 2021 - Dec 2021</h5>
+                    <ul>
+                        <li>Responsible for creating websites for clients</li>
+                        <li>Handling clients' ad-hoc requests</li>
+                        <li>UIUX design for the revamped customer portal</li>
+                    </ul>
+                </li>
+                <li class="single-item">
+                    <h4>
+                        Scentique Limited - Summer Internship
+                    </h4>
+                    <h5>Jul 2018 - Aug 2018</h5>
+                    <ul>
+                        <li>Designing social media promotion materials</li>
+                        <li>Conducting market research about the industry</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Education</h3>
+            <ul class="item">
+                <li class="single-item">
+                    <h4>
+                        The Hong Kong University of Science and Technology
+                    </h4>
+                    <h5>Sep 2019 - Present</h5>
+                    <ul>
+                        <li>School of Business and Management</li>
+                        <li>Majoring in Information Systems</li>
+                    </ul>
+                </li>
             </ul>
         </div>
         <div class="col2">
@@ -30,7 +56,7 @@
     @use "../styles/global.scss" as *;
 
     .wrap {
-        max-width: min(1000px, 85%);
+        max-width: min(1000px, 85vw);
         margin: auto;
         padding-bottom: 4rem;
 
@@ -47,21 +73,27 @@
     }
 
     .exp-wrap {
-        @include flexContainer(row, start, start);
+        @include flexContainer(row, space-around, start);
         gap: 2rem;
+        width: 100%;
 
         .col1 {
             background-color: $white;
             border-radius: 0.5rem;
             padding: 1.5rem 0.8rem;
-            flex: 1;
+            flex: 1.4;
 
-            .work {
+            & > h3 {
+                margin-bottom: 1.5rem;
+            }
+
+            .item {
                 padding: 0;
+                list-style: none;
+            }
 
-                & > h3 {
-                    margin-bottom: 2rem;
-                }
+            .single-item {
+                margin-bottom: 2rem;
 
                 h5 {
                     margin: 0.5rem 0;
@@ -75,16 +107,15 @@
         }
 
         .col2 {
-            @include flexContainer(column, start, start);
+            @include flexContainer(column, space-around, start);
             gap: 2rem;
-            flex: 0.8;
+            flex: 0.6;
 
             .skills,
             .interests {
                 background-color: $white;
                 border-radius: 0.5rem;
                 padding: 1.5rem 0.8rem;
-                width: 100%;
                 height: 50px;
             }
         }
@@ -94,8 +125,9 @@
         .exp-wrap {
             flex-direction: column;
 
-            .col1 {
-                width: fit-content;
+            .col1,
+            .col2 {
+                flex: 1;
             }
         }
     }
