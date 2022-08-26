@@ -1,10 +1,27 @@
 <section class="wrap">
     <h2>My <span>Resume</span></h2>
     <div class="exp-wrap">
-        <div class="col1"></div>
+        <div class="col1">
+            <ul class="work">
+                <h3>Work Experiences</h3>
+                <h4>
+                    GoBuddy Limited - Product Success and Web Design Consultant
+                </h4>
+                <h5>Mar 2021 - Dec 2021</h5>
+                <ul>
+                    <li>Responsible for creating websites for clients</li>
+                    <li>Handling clients' ad-hoc requests</li>
+                    <li>UIUX design for the revamped customer portal</li>
+                </ul>
+            </ul>
+        </div>
         <div class="col2">
-            <div class="skills"></div>
-            <div class="interests"></div>
+            <div class="skills">
+                <h3>Skills</h3>
+            </div>
+            <div class="interests">
+                <h3>Interests</h3>
+            </div>
         </div>
     </div>
 </section>
@@ -32,27 +49,53 @@
     .exp-wrap {
         @include flexContainer(row, start, start);
         gap: 2rem;
-        width: 100%;
-        
 
         .col1 {
             background-color: $white;
             border-radius: 0.5rem;
-            width: 100%;
-            height: 300px;
+            padding: 1.5rem 0.8rem;
+            flex: 1;
+
+            .work {
+                padding: 0;
+
+                & > h3 {
+                    margin-bottom: 2rem;
+                }
+
+                h5 {
+                    margin: 0.5rem 0;
+                }
+
+                ul {
+                    padding-left: 1.3rem;
+                    font-size: 0.9rem;
+                }
+            }
         }
 
         .col2 {
             @include flexContainer(column, start, start);
             gap: 2rem;
-            width: 100%;
+            flex: 0.8;
 
             .skills,
             .interests {
                 background-color: $white;
                 border-radius: 0.5rem;
+                padding: 1.5rem 0.8rem;
                 width: 100%;
                 height: 50px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .exp-wrap {
+            flex-direction: column;
+
+            .col1 {
+                width: fit-content;
             }
         }
     }
