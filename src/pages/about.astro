@@ -4,6 +4,27 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="About">
     <main>
-        <p>I haven't designed the about page tho...</p>
+        <section class="intro">
+            <h1>The About Page</h1>
+            <p>I might post something fun here... A blog maybe?</p>
+        </section>
     </main>
 </Layout>
+
+<style lang="scss">
+    @use "../styles/global.scss" as *;
+
+    .intro {
+        @include flexContainer(column, center, center);
+        text-align: center;
+        padding-top: 70px;
+        height: 450px;
+        background-color: $black;
+        color: $white;
+
+        p {
+            font-weight: 300;
+            margin-top: 2rem;
+        }
+    }
+</style>
