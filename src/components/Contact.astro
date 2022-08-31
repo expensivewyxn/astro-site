@@ -1,30 +1,60 @@
 <section id="contact">
-    <h2>Contact <span>Me</span></h2>
-    <p>I know not everyone likes to fill in a contact form...</p>
-    <br />
-    <p>You could reach out to me via email! I am ready to challenge myself and take up new website projects.</p>
-    <br />
-    <h4>Email: ryanhin@hotmail.com</h4>
+    <div class="wrapper">
+        <h2>Contact <span>Me</span></h2>
+        <p>I know not everyone likes to fill in a contact form...</p>
+        <br />
+        <p>
+            You could reach out to me via email! I am ready to challenge myself
+            and take up new website projects.
+        </p>
+        <br />
+        <p>Email: <a class="email" href="mailto: ryanhin@hotmail.com">ryanhin@hotmail.com</a></p>
+    </div>
+    <h5 class="built">Built with Astro &#129505</h5>
 </section>
 
 <style lang="scss">
     @use "../styles/global.scss" as *;
 
     #contact {
-        max-width: 1000px;
-        width: 85%;
-        margin: auto;
-        padding-bottom: 4rem;
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)
+            ),
+            url("../images/galaxy.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
 
-        h2 {
-            color: $green;
-            text-align: center;
-            margin: 4rem 0;
+        .wrapper {
+            height: 300px;
+            max-width: 1000px;
+            width: 85%;
+            margin: auto;
+            padding: 4rem 0;
+            color: $blue;
 
-            span {
-                font-weight: 300;
-                color: $black;
+            h2 {
+                color: $yellow;
+                text-align: center;
+                margin-bottom: 6rem;
+
+                span {
+                    font-weight: 300;
+                    color: $white;
+                }
             }
+
+            .email {
+                color: $green;
+            }
+        }
+
+        .built {
+            color: $white;
+            text-align: center;
+            padding: 2rem 0;
+            font-weight: 300;
         }
     }
 </style>

@@ -6,6 +6,12 @@ import Project from "./Project.astro";
     <h2>My <span>Projects</span></h2>
     <ul class="grid">
         <Project
+            name="AIESEC Application Portal"
+            link="https://application.aiesec.hk"
+            description="A hobby project that resembles a job application site, with user authentication and filtering capabilities. Built during my year 3 summer holiday."
+            frameworks={["Next JS", "Strapi"]}
+        />
+        <Project
             name="AIESEC HK Website"
             link="https://aiesec.hk"
             description="I revamped the whole design of the website during my year 3. Used Wix but eventually settled on WordPress (for easier management). It's currently managed by my successors."
@@ -16,12 +22,6 @@ import Project from "./Project.astro";
             link="https://ys.aiesec.hk"
             description="Another project that I built during my AIESEC term. A static display site for an event. Built with Elementor as well."
             frameworks={["WordPress"]}
-        />
-        <Project
-            name="AIESEC Application Portal"
-            link="https://application.aiesec.hk"
-            description="A hobby project that resembles a job application site, with user authentication and filtering capabilities. Built during my year 3 summer holiday."
-            frameworks={["Next JS", "Strapi"]}
         />
     </ul>
 </section>

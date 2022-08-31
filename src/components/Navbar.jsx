@@ -29,16 +29,13 @@ export default function Navbar() {
           <li>
             <a href="/about">About</a>
           </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
         </ul>
         <div className={styles.ham} onClick={() => setClicked(!clicked)}>
           <span className={clicked ? styles.bar1 : undefined}></span>
           <span className={clicked ? styles.bar2 : undefined}></span>
           <span className={clicked ? styles.bar3 : undefined}></span>
         </div>
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {clicked ? (
             <div className={styles.navmenu}>
               <motion.ul
@@ -48,13 +45,10 @@ export default function Navbar() {
                 exit="exit"
               >
                 <motion.li variants={item}>
-                  <a href="/#">Home</a>
+                  <a href="/">Home</a>
                 </motion.li>
                 <motion.li variants={item}>
                   <a href="/about">About</a>
-                </motion.li>
-                <motion.li variants={item}>
-                  <a href="#contact">Contact</a>
                 </motion.li>
               </motion.ul>
             </div>
