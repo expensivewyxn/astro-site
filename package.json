@@ -12,7 +12,7 @@
   "devDependencies": {
     "@astrojs/image": "^0.3.6",
     "@astrojs/react": "^1.0.0",
-    "astro": "^1.0.8",
+    "astro": "^1.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.54.5"
